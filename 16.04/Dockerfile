@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
         systemd \
         systemd-sysv \
-        ca-certificates
+        ca-certificates \
     && apt-get clean
 
 # We never want these to run in a container

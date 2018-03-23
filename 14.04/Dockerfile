@@ -1,5 +1,7 @@
 FROM ubuntu:14.04
 
+LABEL maintainer="Wilmar den Ouden <info@wilmardenouden.nl>"
+
 ENV container docker
 ENV DEBIAN_FRONTEND noninteractive
 

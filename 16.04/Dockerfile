@@ -3,14 +3,6 @@ FROM ubuntu:16.04
 LABEL maintainer="Wilmar den Ouden <info@wilmardenouden.nl>"
 
 ENV container docker
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        systemd \
-        systemd-sysv \
-        ca-certificates \
-    && apt-get clean
 
 # We never want these to run in a container
 RUN systemctl mask \

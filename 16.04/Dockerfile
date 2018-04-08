@@ -21,8 +21,6 @@ RUN systemctl mask \
         systemd-remount-fs.service \
         getty.target \
         graphical.target \
-        console-getty.service \
-        systemd-vconsole-setup.service \
         kmod-static-nodes.service \
     && systemctl set-default multi-user.target
 

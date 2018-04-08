@@ -6,6 +6,16 @@ ENV container docker
 
 ADD init-fake.conf /etc/init/fake-container-events.conf
 
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y \
+            python \
+            sudo \
+            bash \
+            ca-certificates \
+    && apt-get clean
+
+
 # undo some leet hax of the base image
 RUN rm /usr/sbin/policy-rc.d; \
 	rm /sbin/initctl; dpkg-divert --rename --remove /sbin/initctl

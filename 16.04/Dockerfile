@@ -26,4 +26,4 @@ RUN systemctl mask \
 
 STOPSIGNAL SIGRTMIN+3
 
-ENTRYPOINT ["/sbin/init"]
+CMD ["/bin/bash", "-c", "exec /sbin/init --log-target=journal 3>&1"]

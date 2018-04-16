@@ -22,6 +22,8 @@ RUN systemctl mask \
         getty.target \
         graphical.target \
         kmod-static-nodes.service \
+        console-getty.service \
+        systemd-vconsole-setup.service \
     && systemctl set-default multi-user.target
 
 STOPSIGNAL SIGRTMIN+3

@@ -10,6 +10,6 @@ RUN if [ $(command -v apt-get) ]; then apt-get update && apt-get upgrade -y && a
     elif [ $(command -v zypper) ]; then zypper refresh && zypper update -y && zypper install -y python sudo bash python-xml && zypper clean -a; \
     elif [ $(command -v apk) ]; then apk update && apk add --no-cache python sudo bash ca-certificates; fi
 
-COPY files/docker/systemctl.py /usr/bin/systemctl
+COPY systemctl.py /usr/bin/systemctl
 
 CMD /usr/bin/systemctl

@@ -1,4 +1,4 @@
-FROM centos:7
+FROM ubuntu:16.04
 
 LABEL maintainer="Wilmar den Ouden <info@wilmardenouden.nl>"
 
